@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Romnea';
+}
+
+:root {
+    --ff-primary: 'Romnea';
+    --fw-Ligh: 300;
+    --fw-Regular: 400;
+    --fw-Bold: 700;
+    --fw-ExtraBold: 800;
+    --p-font-size: 1.2rem;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+video {
+    width: 100%;
+    height: 170%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.overlay-vid-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Image/Overlay-dot.png);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header {
+    padding: 0 30px;
+}
+
+header:nth-child(1) {
+    width: 100%;
+    border-radius: 20px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul .nav-item {
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul .nav-item .nav-link i {
+    margin-right: 15px;
+}
+
+nav ul .nav-item.active .nav-link,
+nav ul .nav-item.active .line-hover {
+    color: #f1d14f;
+    right: 0;
+}
+
+.line-hover {
+    width: 100%;
+    height: 5px;
+    background-color: #f1d14f;
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    transition: .5s;
+}
+
+nav ul .nav-item:hover .line-hover {
+    right: 0;
+}
+
+nav ul .nav-item .nav-link {
+    text-decoration: none;
+    display: block;
+    padding: 20px 20px;
+    font-weight: var(--fw-Bold);
+    font-size: 20px;
+    transition: .3s;
+    color: white;
+}
+
+nav ul .nav-item .nav-link:hover {
+    color: #f1d14f;
+}
+
+/* /// Hero Banner /// */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-banner h1 {
+    color: white;
+    text-align: center;
+}
+
+.hero-banner p {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.hero-banner h3 {
+    color: white;
+    text-align: center;
+    max-width: 550px;
+}
+
+.hero-banner a {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bg-btn-hover {
+    position: absolute;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f1d14f;
+    top: 0;
+    z-index: 1;
+    transition: .3s;
+}
+
+.hero-banner a:hover .bg-btn-hover {
+    right: 0;
+}
+
+.hero-banner button {
+    width: 200px;
+    min-height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: var(--fw-Bold);
+    z-index: 2;
+}
+
+.hero-banner a button p {
+    width: 100%;
+    position: absolute;
+    z-index: 22;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.hero-banner h4,
+.hero-banner h5 {
+    color: white;
+    text-align: center;
+}
+
+.hero-banner h4 span {
+    color: #f1d14f;
+}
+
+.hero-banner h5 span {
+    color: #8eb932;
+}
+
+.anime-pictures,
+.cartoon-pictures {
+    text-align: center;
+}
+
+.anime-pictures:hover> :not(:hover) {
+    opacity: .4;
+}
+
+@media (max-width: 1080px) {
+    nav ul .nav-item .nav-link {
+        font-size: 15px;
+    }
+
+    nav ul .nav-item .nav-link {
+        padding: 15px 15px;
+    }
+
+    .hero-banner h1 {
+        font-size: 23px;
+    }
+
+    .hero-banner p {
+        font-size: 14px;
+    }
+
+    .hero-banner h4 {
+        text-align: center;
+        font-size: .85rem;
+    }
+
+    .hero-banner h5 {
+        font-size: .7rem;
+    }
+
+    .line-hover {
+        height: 4px;
+    }
+}
+
+@media (max-width: 780px) {
+    nav ul .nav-item .nav-link {
+        font-size: 10px;
+    }
+
+    nav ul .nav-item .nav-link {
+        padding: 10px 10px;
+    }
+
+    .hero-banner h1 {
+        font-size: 20px;
+    }
+
+    .hero-banner p {
+        font-size: 12px;
+    }
+
+    .hero-banner h4 {
+        text-align: center;
+        font-size: .7rem;
+    }
+
+    .hero-banner h5 {
+        font-size: .65rem;
+    }
+
+    .line-hover {
+        height: 3px;
+    }
+}
+
+@media (max-width: 520px) {
+    nav ul .nav-item .nav-link {
+        font-size: 8px;
+    }
+
+    nav ul .nav-item .nav-link {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 475px) {
+    nav ul .nav-item .nav-link {
+        font-size: 8px;
+    }
+
+    nav ul .nav-item .nav-link {
+        padding: 10px 0px;
+    }
+
+    .hero-banner h1 {
+        font-size: 18px;
+    }
+
+    .hero-banner p {
+        font-size: 10px;
+    }
+
+    .hero-banner h4 {
+        text-align: center;
+        font-size: .5rem;
+    }
+
+    .hero-banner h5 {
+        font-size: .4rem;
+    }
+}
+
+@media (max-width: 779px) {
+    .container {
+        width: 100%;
+        padding: 0 10%;
+    }
+
+    .hero-banner {
+        flex-direction: row;
+    }
+}
+
+.news {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background-color: #30344c;
+    padding: 1em;
+    z-index: 5;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 300px;
+    transition: 200ms ease-in-out;
+    top: 5px;
+    margin-top: 15px;
+}
+
+.card:hover {
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+.date {
+    color: #C6E1ED;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.body-card .text {
+    margin: 0 10px 0 0;
+    white-space: pre-line;
+    color: #c0c3d7;
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.body-card img {
+    align-content: center;
+}
+
+.text {
+    font-size: 15px;
+}
+
+@media (max-width: 779px) {
+    .container {
+        width: 100%;
+        padding: 0 10%;
+    }
+
+    .hero-banner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 487px) {
+    img {
+        width: 200px;
+    }
+}
